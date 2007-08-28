@@ -42,7 +42,6 @@ install -m0755 bin/fretscale %{buildroot}%{_bindir}/
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=FretScale
 Comment=Calculates fret distances for stringed musical instruments
 Exec=%{_bindir}/%{name} 
