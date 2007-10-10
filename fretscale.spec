@@ -45,7 +45,7 @@ cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 Name=FretScale
 Comment=Calculates fret distances for stringed musical instruments
 Exec=%{_bindir}/%{name} 
-Icon=sound_section.png
+Icon=sound_section
 Terminal=false
 Type=Application
 Categories=X-MandrivaLinux-Multimedia-Sound;AudioVideo;Audio;Recorder;
