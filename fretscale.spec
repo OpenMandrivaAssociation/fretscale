@@ -10,7 +10,7 @@ Source0:	fretscale-%{version}.tar.bz2
 BuildRequires:	kdelibs-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
-BuildRequires:	XFree86-devel
+BuildRequires:	X11-devel
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
