@@ -12,7 +12,6 @@ BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	X11-devel
 BuildRequires:	libstdc++-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
 fretscale finds fret distances from the nut for stringed musical
