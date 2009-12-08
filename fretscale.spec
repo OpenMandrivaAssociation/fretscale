@@ -1,13 +1,13 @@
 Summary:	Calculates fret distances for stringed musical instruments
 Name:		fretscale
 Version:	2.0
-Release:	%mkrel 7
+Release:	%mkrel 8
 Group:		Sound
-License:	GPL
+License:	GPLv2+
 # this url is dead...
-URL:            http://members.safepages.net/gurensan/
+#URL:            http://members.safepages.net/gurensan/
 Source0:	fretscale-%{version}.tar.bz2
-BuildRequires:	kdelibs-devel
+BuildRequires:	qt3-devel
 BuildRequires:	libjpeg-devel
 BuildRequires:	libpng-devel
 BuildRequires:	X11-devel
@@ -25,10 +25,8 @@ distance after each fret.
 %setup -q
 
 %build
-export QTDIR=%{_prefix}/lib/qt3
-export KDEDIR=%{_prefix}
 
-qmake
+%qmake_qt3
 
 %make
 
@@ -39,8 +37,8 @@ install -d %{buildroot}%{_bindir}
 install -m0755 bin/fretscale %{buildroot}%{_bindir}/
 
 
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
+mkdir -p %{buildroot}%{_datadir}/applications
+cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=FretScale
 Comment=Calculates fret distances for stringed musical instruments
