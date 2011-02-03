@@ -1,17 +1,13 @@
 Summary:	Calculates fret distances for stringed musical instruments
 Name:		fretscale
 Version:	2.0
-Release:	%mkrel 9
+Release:	%mkrel 10
 Group:		Sound
 License:	GPLv2+
 # this url is dead...
 #URL:            http://members.safepages.net/gurensan/
 Source0:	fretscale-%{version}.tar.bz2
 BuildRequires:	qt3-devel
-BuildRequires:	libjpeg-devel
-BuildRequires:	libpng-devel
-BuildRequires:	X11-devel
-BuildRequires:	libstdc++-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description
@@ -21,13 +17,10 @@ output with/without a heading and with/without the remaining scale
 distance after each fret. 
 
 %prep
-
 %setup -q
 
 %build
-
 %qmake_qt3
-
 %make
 
 %install
