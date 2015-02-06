@@ -1,7 +1,7 @@
 Summary:	Calculates fret distances for stringed musical instruments
 Name:		fretscale
 Version:	2.0
-Release:	%mkrel 10
+Release:	11
 Group:		Sound
 License:	GPLv2+
 # this url is dead...
